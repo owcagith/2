@@ -1,0 +1,176 @@
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@100;300;400;600&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+:root {
+    --Very-dark-blue-main: hsl(217, 54%, 11%);
+    --Very-dark-blue-card: hsl(216, 50%, 16%);
+    --Very-dark-blue-line: hsl(215, 32%, 27%);
+    --White: hsl(0, 0%, 100%);
+    --Soft-blue: hsl(215, 51%, 70%);
+    --Cyan: hsl(178, 100%, 50%);
+    --Cyan-hover: hsl(178, 100%, 50%, 50%);
+}
+
+body {
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--Very-dark-blue-main);
+}
+
+#card {
+    height: fit-content;
+    width: 375px;
+    border-radius: 20px;
+    background-color: var(--Very-dark-blue-card);
+    padding: 30px;
+    box-sizing: border-box;
+}
+
+#image-box {
+    width: 100%;
+    height: 315px;
+    position: relative;
+}
+
+#image-box img {
+    width: 100%;
+    height: 100%;
+    border-radius: 10px;
+}
+
+#image-hover {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    cursor: pointer;
+    border-radius: 10px;
+    transition: .4s ease;
+    background-color: var(--Cyan-hover);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+}
+
+#image-box:hover #image-hover {
+    opacity: 1;
+}
+
+#image-hover img {
+    width: 50px;
+    height: 50px;
+}
+
+#info {
+    width: 100%;
+    height: fit-content;
+    font-family: 'Outfit', sans-serif;
+    color: var(--White);
+    margin: 20px 0;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+#info h2 {
+    font-weight: 600;
+    cursor: pointer;
+    transition: .3s;
+}
+
+#info h2:hover {
+    color: var(--Cyan);
+} 
+
+#info p {
+    font-size: 18px;
+    font-weight: 100;
+    color: var(--Soft-blue);
+}
+
+#pricentime {
+    width: 100%;
+    height: fit-content;
+    display: flex;
+    font-family: 'Outfit', sans-serif;
+}
+
+#st, #nd {
+    width: 50%;
+}
+
+#st {
+    color: var(--Cyan);
+}
+
+#st h3::before {
+    content: url(images/icon-ethereum.svg);
+    vertical-align: middle;
+    margin-right: 10px;
+}
+
+#nd {
+    display: flex;
+    justify-content: flex-end;
+}
+
+#nd p {
+    font-weight: 400;
+    font-size: 18px;
+}
+
+#nd p::before {
+    content: url(images/icon-clock.svg);
+    vertical-align: middle;
+    margin-right: 5px;
+}
+
+#line {
+    height: 1px;
+    width: 100%;
+    background-color: var(--Very-dark-blue-line);
+}
+
+#author {
+    width: 100%;
+    height: fit-content;
+    display: flex;
+    font-family: 'Outfit', sans-serif;
+    align-items: center;
+    margin: 15px 0 0;
+}
+
+#author h3 {
+    color: var(--Soft-blue);
+    font-weight: 300;
+}
+
+#author span {
+    color: var(--White);
+    cursor: pointer;
+    transition: .3s;
+}
+
+#author span:hover {
+    color: var(--Cyan);
+}
+
+#author-avatar {
+    width: 35px;
+    height: 35px;
+    border: 1px solid var(--White);
+    border-radius: 50%;
+    margin-right: 15px;
+}
+
+#author-avatar img {
+    width: 100%;
+    height: 100%;
+}
